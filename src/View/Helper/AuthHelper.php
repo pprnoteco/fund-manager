@@ -38,4 +38,15 @@ class AuthHelper extends Helper
         if (!$this->_user) return null;
         return explode('@', $this->_user['username'])[0];
     }
+    
+    /*
+     |--------------------------------------------------------------------
+     | Role
+     |--------------------------------------------------------------------
+     */
+    
+    public function role()
+    {
+        return $this->_user ? $this->_user['role'] : null;
+    }
 }

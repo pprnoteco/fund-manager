@@ -89,6 +89,7 @@ $navigation = isset($navigation) ? $navigation : true;
                     </li>
                 </ul>
                 
+                <?php if ($this->Auth->role() == 3): ?>
                 <span class="fa fa-cog" style="margin-left: 5px;"></span>
                 
                 <ul class="list-inline navbar-text-nav">
@@ -96,6 +97,7 @@ $navigation = isset($navigation) ? $navigation : true;
                         <a href="<?= $this->url('/admin') ?>">Admin panel</a>
                     </li>
                 </ul>
+                <?php endif ?>
                 
             </span>
             

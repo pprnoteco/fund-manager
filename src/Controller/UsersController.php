@@ -366,6 +366,7 @@ class UsersController extends AppController
         $this->Auth->allow([
             'login',
             'create',
+            'activate',
             'verifyEmailSent',
             'verifyEmailResend',
             'forgotPassword',
