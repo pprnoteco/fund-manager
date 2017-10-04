@@ -39,6 +39,7 @@
         <?= $this->html->script('underscore-min.js'). "\n" ?>
         <?= $this->html->script('backbone-min.js'). "\n" ?>
         <?= $this->html->script('moment.min.js'). "\n" ?>
+        <?= $this->html->script('chart.min.js'). "\n" ?>
         <?= $this->html->script('dist/app.js'). "\n" ?>
         <script>
         (function (App) {

@@ -12,6 +12,7 @@
   "author": "Joe Trumbull <jtrumbull@pprnoteco.com>",
   "license": "MIT",
   "dependencies": {
+    "chart.js": "^2.7.0",
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.1.0",
     "grunt-contrib-concat": "^1.0.1",

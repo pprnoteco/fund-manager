@@ -16,7 +16,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     
     $routes->extensions(['json']);
     
-    $routes->connect('/', ['controller' => 'Funds', 'action' => 'index']);
+    $routes->connect('/', ['controller' => 'Reports', 'action' => 'index']);
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
     
     $routes->connect('/activate', ['controller' => 'Users', 'action' => 'activate']);
