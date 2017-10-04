@@ -1,0 +1,154 @@
+/* Navbar text */
+
+.navbar-text a {
+    color: rgba(255, 255, 255, .5);
+}
+
+.navbar-text a:focus, 
+.navbar-text a:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* Navbar text */
+
+.navbar-text .fa {
+    margin-right: 5px;
+}
+
+/* Navbar text > Navigation */
+
+.navbar-text-nav {
+    display: inline;
+}
+
+.navbar-text-nav > li:not(:first-child)::before {
+    margin-right: 5px;
+    content: "|";
+}
+
+.navbar-text-nav > .active > a {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar-text-nav > .active > a:focus,
+.navbar-text-nav > .active > a:hover {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Page header */
+
+.page-header {
+    margin-top: 20px;
+}
+
+.table-toolbar {
+    margin-bottom: 20px;
+}
+
+/* Button */
+
+.btn > .fa {
+    margin-right: 5px;
+}
+
+/* Form alert */
+
+.form-alert {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.form-alert .fa {
+    margin-right: 5px;
+}
+
+[data-component="form-alert"] {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+[data-component="form-alert"] .fa {
+    margin-right: 5px;
+}
+
+/* Foot navigation */
+
+.footer-nav {
+    margin-bottom: 0;
+}
+
+.footer-nav > li:not(:first-child)::before {
+    margin-right: 5px;
+    content: "\00B7";
+}
+
+/* Card > footer > navigation */
+
+.card-footer-nav {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.card-footer-nav > li {
+    display: inline-block;
+}
+
+.card-footer-nav > li:not(:last-child) {
+  margin-right: 5px;
+}
+
+.card-footer-nav > li:not(:first-child)::before {
+    margin-right: 5px;
+    content: "\00B7";
+}
+
+/* Profile */
+
+.profile {
+    margin-bottom: 30px;
+}
+
+.profile tr:first-child td,
+.profile tr:first-child th {
+    border-top: 0;
+}
+
+/* Table form elements */
+
+td > .form-control {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+td > select.form-control {
+    height: 34px!important;
+}
+
+/* Table sort indicators */
+
+th.sortable {
+  position: relative;
+  cursor: pointer;
+}
+
+th.sortable::after {
+  font-family: FontAwesome;
+  content: "\f0dc";
+  position: absolute;
+  right: 8px;
+  color: #999;
+}
+
+th.sortable.asc::after {
+  content: "\f0d8";
+}
+
+th.sortable.desc::after {
+  content: "\f0d7";
+}
+
+th.sortable:hover::after {
+  color: #333;
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Statement &middot; {{ investment.client_id }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+    body {
+        font-family: sans-serif;
+    }
+    #icon {
+        position: absolute;
+        top: 0px;
+    }
+    #address {
+        position: absolute;
+        left: 90px;
+        top: 5px;
+    }
+    #clientid {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+    #header {
+        height: 75px;
+    }
+    #date {
+        position: absolute;
+        right: 0px;
+        top: 105px;
+    }
+    #profile {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    #profile th {
+        padding-right: 20px;
+    }
+    #profile th:after {
+        content: ':'
+    }
+    #transactions {
+        margin-top: 10px;
+        margin-bottom: 50px;
+        width: 100%;
+    }
+    #transactions th {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #transactions th, #transactions td {
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+        
+    <header id="header">
+        <img id="icon" src="data:image/gif;base64,R0lGODlhRgBGAPcAAOLj4y1Ta5SUlDVccJTE1dC4mkJleWNjY4fC2khsgmO94VWPq37F5qSlpvnKjpHN6YnK5lq45P768jxgdZ6envuqOfmsU/yuSpGmsHXA3oDG5nV1dShOYvD9/Thecve4aNPT01i13P799+nz9myHlvrWpDNZb3C+4v746EVpfGOYsoKDg/j+/7u7uzluioLK6ydHW3x8fJiFcHrE5GjA5fywTNnm7F1dXUZcazBWbUprfILI5nzI5vazWvLz9MHBwf2tRVV0hkBidrPDzD1jeH7E6bmkh4aapc/b4B1KZfmtTf///2O533TB4ktzim294fSrTCpQZmqhuShWc2mrykR8lo3N6P3hufmvSYTH53HB4W2+21KGnaaObP2uToDH6IrK6PzmxvXCfWG023nC5YbI5v2wRPWrRHzM7YTJ5md2e/3u12i84Y7J5OysR2V8iGS14fmvR0xMTHO93eqpV/76+cXV4ILE4IrM5rW1tFNUVHnE4Pj5+Dlab3q203jC4///+yVRbHWqxPz///2rRHu94nbC5HzC5Tdhen++21J+lP6tP8rLzHbF4/z13zVfczFTZnHE6ma64NKleYrM6B1EWIzM5/z8/GfK+nHA5Pr8+YjC6PCmTE9ugv6pTvmuP/77/vuqR1BsfUlmfnDD5YPH5HS104x/cfurTf/8//6qSXbG5/j7/i5ZcIbK5X3F4lqhwWO510hkdP/8+2i35IbK6PmrR2++5PSwQurt7n671furQ1Wu10prdnC65fKwUYDM5v2pQjJed/z//GC86Gi754TG4zxWZiZPZzdXaonH5D5pfvOnQ0ZseWS0047L54PK5h8+UoDC5IHC3nLE40dvgH/I4jVWcH7A3/z9/nS75y5NYJPP62y74EZlbn/I8T1ddWfA6Pj99v327//2/fvw5ZeXl3bI5HfI7IPT65GRkTlea4B2aiVVbytjgPH2+EBecfikP6S3wLuuoa6urW1ranyPmVBPT1694We11+/l3Hyy0Wu+5ofL7IjN7sDP1iH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6N0M2OUY2REIxRTkyMTFFNjhDN0NEMDREMUJBMTMxMTUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N0M2OUY2REMxRTkyMTFFNjhDN0NEMDREMUJBMTMxMTUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3QzY5RjZEOTFFOTIxMUU2OEM3Q0QwNEQxQkExMzExNSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3QzY5RjZEQTFFOTIxMUU2OEM3Q0QwNEQxQkExMzExNSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgH//v38+/r5+Pf29fTz8vHw7+7t7Ovq6ejn5uXk4+Lh4N/e3dzb2tnY19bV1NPS0dDPzs3My8rJyMfGxcTDwsHAv769vLu6ubi3trW0s7KxsK+urayrqqmop6alpKOioaCfnp2cm5qZmJeWlZSTkpGQj46NjIuKiYiHhoWEg4KBgH9+fXx7enl4d3Z1dHNycXBvbm1sa2ppaGdmZWRjYmFgX15dXFtaWVhXVlVUU1JRUE9OTUxLSklIR0ZFRENCQUA/Pj08Ozo5ODc2NTQzMjEwLy4tLCsqKSgnJiUkIyIhIB8e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">
+        <div id="address">
+            <strong >{{ fund.name }}</strong><br/>
+            {{ fund.address }}<br/>
+            {{ fund.city }}, {{ fund.state }} {{ fund.zip }}
+        </div>
+        <div id="clientid">
+            {{ investment.client_id }}
+        </div>
+    </header>
+        
+        <div class="container">
+            
+            <small id="date">{{ date }}</small>
+            
+            <h2 style="margin-bottom: 0px;">
+                Investment statement
+            </h2>
+            
+            <hr />
+            
+            <table id="profile">
+                <tbody>
+                    
+                    <!-- Fund information
+                    ----------------------------------------------------->
+                    
+                    <tr>
+                        <th style="width: 35%;">Fund name</th>
+                        <td>{{ fund.name }}</td>
+                    </tr>
+                    
+                    <tr>
+                        <th>Fund name</th>
+                        <td>{{ offering.rate|number_format(3) }}%</td>
+                    </tr>
+                    
+                    
+                    <!-- Investor information
+                    ----------------------------------------------------->
+                    
+                    <tr>
+                        <th>Investor name</th>
+                        <td>{{ investor.name }}</td>
+                    </tr>
+                    
+                    <tr>
+                        <th>Investor account</th>
+                        <td>{{ account.name }}</td>
+                    </tr>
+                    
+                    <!-- Investment information
+                    ----------------------------------------------------->
+                    
+                    <tr>
+                        <th>Investment amount</th>
+                        <td>$ {{ investment.amount|number_format(2) }}</td>
+                    </tr>
+                    
+                    <tr>
+                        <th>Investment funding date</th>
+                        <td>{{ investment.date.format('m/d/Y') }}</td>
+                    </tr>
+                    
+                    <tr>
+                        <th>Investment term</th>
+                        <td>{{ investment.term }} months</td>
+                    </tr>
+                    
+                    <!-- Investment information
+                    ----------------------------------------------------->
+                    
+                    <tr>
+                        <th>Investment balance</th>
+                        <td>$ {{ investment.balance|number_format(2) }}</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+            <h2 style="margin-bottom: 0px;">
+                Transaction summary
+            </h2>
+            
+            <hr />
+            
+            <table id="transactions">
+                <thead>
+                    <tr>
+                        <th style="text-align: center">Date</th>
+                        <th style="text-align: center">Amount</th>
+                        <th style="text-align: center">Transaction type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for transaction in transactions %}
+                    <tr>
+                        <td>{{ transaction.date.format('m/d/Y') }}</td>
+                        <td>$ {{ transaction.amount|number_format(2) }}</td>
+                        <td>
+                            {% if transaction.type == 0 %}
+                                Initial deposit
+                            {% elseif transaction.type == 1 %}
+                                Preferred payment (prorated)
+                            {% elseif transaction.type == 2 %}
+                                Preferred payment
+                            {% elseif transaction.type == 3 %}
+                                Principal drawdown
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            
+            <hr />
+            
+            <p style="font-style: italic; color: darkgray;">
+                If you have any questions or discrepancies please contact the Investor Relations Department by phone: (877) 395-1290 -or by email: accounting@pprnoteco.com.
+            </p>
+            
+        </div>
+        
+</body>
+</html>
